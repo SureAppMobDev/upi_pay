@@ -106,7 +106,7 @@ class _AndroidDiscovery implements _PlatformDiscoveryBase {
           return true;
       }
     }
-    return false;
+    return true;
   }
 }
 
