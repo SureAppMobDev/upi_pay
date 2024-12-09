@@ -92,20 +92,20 @@ class _AndroidDiscovery implements _PlatformDiscoveryBase {
 
   bool _canUseApp(UpiApplicationDiscoveryAppStatusType statusType,
       UpiApplicationAndroidStatus androidStatus) {
-    if (androidStatus.setup == UpiApplicationSetupStatus.success &&
-        androidStatus.linkingSupport == UpiApplicationLinkingSupport.shows) {
-      switch (statusType) {
-        case UpiApplicationDiscoveryAppStatusType.working:
-          return androidStatus.nonMerchantPaymentStatus ==
-                  NonMerchantPaymentAndroidStatus.success &&
-              !androidStatus.warnsUnverifiedSourceForNonMerchant;
-        case UpiApplicationDiscoveryAppStatusType.workingWithWarnings:
-          return androidStatus.nonMerchantPaymentStatus ==
-              NonMerchantPaymentAndroidStatus.success;
-        case UpiApplicationDiscoveryAppStatusType.all:
-          return true;
-      }
-    }
+    // if (androidStatus.setup == UpiApplicationSetupStatus.success &&
+    //     androidStatus.linkingSupport == UpiApplicationLinkingSupport.shows) {
+    //   switch (statusType) {
+    //     case UpiApplicationDiscoveryAppStatusType.working:
+    //       return androidStatus.nonMerchantPaymentStatus ==
+    //               NonMerchantPaymentAndroidStatus.success &&
+    //           !androidStatus.warnsUnverifiedSourceForNonMerchant;
+    //     case UpiApplicationDiscoveryAppStatusType.workingWithWarnings:
+    //       return androidStatus.nonMerchantPaymentStatus ==
+    //           NonMerchantPaymentAndroidStatus.success;
+    //     case UpiApplicationDiscoveryAppStatusType.all:
+    //       return true;
+    //   }
+    // }
     return true;
   }
 }
